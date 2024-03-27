@@ -4,9 +4,12 @@ import java.awt.event.*;
 class Fdemo extends Frame implements ActionListener{
 	
 	Button b[] = new Button[9];	
-	int k=0;
-	int x=8;
-	int y=28;
+	
+	Button b1; //New game button.
+	
+	int k=0,x=8,y=28;
+	int a= 0; // O and X.
+	int z=0,z1=0,z2=0,z3=0,z4=0,z5=0,z6=0,z7=0,z8=0,z9=0; 
 	
 	
 	Fdemo(){
@@ -30,7 +33,7 @@ class Fdemo extends Frame implements ActionListener{
 					add(b[k]);
 					
 					b[k].addActionListener(this);
-					b[k].setBackground(new Color(255,141,28)); // ORANGE
+					b[k].setBackground(new Color(255,141,28)); // Orange
 					k++;
 					x=x+100;
 					
@@ -44,6 +47,107 @@ class Fdemo extends Frame implements ActionListener{
 	
 	public void actionPerformed(ActionEvent e){
 		
+		// For new game
+		if(e.getSource()==b1){
+			
+			for(int i=0;i<=8;i++){
+				b[i].setLabel("");
+			}
+			z=0;z1=0;z2=0;z3=0;z4=0;z5=0;z6=0;z7=0;z8=0;
+		}
+		
+		// For the 9 buttons
+		
+		if(e.getSource()==b[0] &&  z==0){
+			
+			if(a%2==0){
+				b[0].setLabel("O"); z++; a++;
+			}
+			else{
+				b[0].setLabel("X"); z++; a++;
+			}
+				
+		}
+		if(e.getSource()==b[1] &&  z1==0){
+			
+			if(a%2==0){
+				b[1].setLabel("O"); z1++; a++;
+			}
+			else{
+				b[1].setLabel("X"); z1++; a++;
+			}
+				
+		}
+		if(e.getSource()==b[2] &&  z2==0){
+			
+			if(a%2==0){
+				b[2].setLabel("O"); z2++; a++;
+			}
+			else{
+				b[2].setLabel("X"); z2++; a++;
+			}
+				
+		}
+		if(e.getSource()==b[3] &&  z3==0){
+			
+			if(a%2==0){
+				b[3].setLabel("O"); z3++; a++;
+			}
+			else{
+				b[3].setLabel("X"); z3++; a++;
+			}
+				
+		}
+		if(e.getSource()==b[4] &&  z4==0){
+			
+			if(a%2==0){
+				b[4].setLabel("O"); z4++; a++;
+			}
+			else{
+				b[4].setLabel("X"); z4++; a++;
+			}
+				
+		}
+		if(e.getSource()==b[5] &&  z5==0){
+			
+			if(a%2==0){
+				b[5].setLabel("O"); z5++; a++;
+			}
+			else{
+				b[5].setLabel("X"); z5++; a++;
+			}
+				
+		}
+		if(e.getSource()==b[6] &&  z6==0){
+			
+			if(a%2==0){
+				b[6].setLabel("O"); z6++; a++;
+			}
+			else{
+				b[6].setLabel("X"); z6++; a++;
+			}
+				
+		}
+		if(e.getSource()==b[7] &&  z7==0){
+			
+			if(a%2==0){
+				b[7].setLabel("O"); z7++; a++;
+			}
+			else{
+				b[7].setLabel("X"); z7++; a++;
+			}
+				
+		}
+		if(e.getSource()==b[8] &&  z8==0){
+			
+			if(a%2==0){
+				b[8].setLabel("O"); z8++; a++;
+			}
+			else{
+				b[8].setLabel("X"); z8++; a++;
+			}
+				
+		}
 	}
 }		
 public class tictactoe{
