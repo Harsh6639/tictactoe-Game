@@ -5,11 +5,11 @@ class Fdemo extends Frame implements ActionListener{
 	
 	Button b[] = new Button[9];	
 	
-	Button b1; //New game button.
+	Button b1; // New game
 	
 	int k=0,x=8,y=28;
-	int a= 0; // O and X.
-	int z=0,z1=0,z2=0,z3=0,z4=0,z5=0,z6=0,z7=0,z8=0,z9=0; 
+	int a = 0; // O and X
+	int z=0,z1=0,z2=0,z3=0,z4=0,z5=0,z6=0,z7=0,z8=0;
 	int l = 70;
 	
 	
@@ -19,8 +19,8 @@ class Fdemo extends Frame implements ActionListener{
 			setVisible(true);
 			setSize(800,600);
 			setLocation(400,100);
-			setBackground(Color.white);
-			setForeground(Color.black);	
+			setBackground(Color.black);
+			setForeground(Color.white);		
 			
 			for(int i=1;i<=3;i++){
 				
@@ -34,7 +34,7 @@ class Fdemo extends Frame implements ActionListener{
 					add(b[k]);
 					
 					b[k].addActionListener(this);
-					b[k].setBackground(new Color(255,141,28)); // Orange
+					b[k].setBackground(new Color(255,141,28)); // ORANGE
 					k++;
 					x=x+100;
 					
@@ -42,17 +42,20 @@ class Fdemo extends Frame implements ActionListener{
 				
 				x=8; 
 				y=y+100;
-			}	
-					b1.setSize(150,40);
-					b1 = new Button("New Game");
-					b1.setLocation(500,300);
-					b1.setFont(new Font("",Font.BOLD,20));
-					b1.setForeground(Color.black);
+			}
 			
-					add(b1);
-					b1.addActionListener(this);			
-		
+			b1 = new Button("New Game");
+			b1.setSize(150,40);
+			b1.setLocation(500,300);
+			b1.setFont(new Font("",Font.BOLD,20));
+			b1.setBackground(new Color(142,125,40));
+			b1.setForeground(Color.black);
+			
+			add(b1);
+			b1.addActionListener(this);
+			
 	}
+	
 	
 	public void actionPerformed(ActionEvent e){
 		
